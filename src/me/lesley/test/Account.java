@@ -28,10 +28,10 @@ public class Account {
 
     public void withdraw(int amount) {
         int withdrawal = -amount;
-        if (amount < 0) {
+        if (amount > 0) {
             transactions.add(withdrawal);
             this.balance += withdrawal;
-            System.out.println(withdrawal + " withdrawn, and the balance now is " + this.balance);
+            System.out.println(amount + " withdrawn, and the balance now is " + this.balance);
         }else {
             System.out.println("Can not withdrawn negative sums");
         }
